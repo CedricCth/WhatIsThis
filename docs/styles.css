@@ -8,6 +8,10 @@ body {
     font-family: 'Arial', sans-serif;
     flex-direction: column;
   }
+
+  p{
+    color: #d32f2f;
+  }
   
   .container {
     text-align: center;
@@ -15,7 +19,7 @@ body {
   
   h1 {
     font-size: 2.5em;
-    color: #d32f2f;
+    color: #f77878;
   }
   
   .buttons {

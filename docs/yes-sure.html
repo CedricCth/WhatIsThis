@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Knew you would say yes hehe</title>
+    <link rel="stylesheet" href="./yes_style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="gif_container"></div>
+            <h1 class="header_text">hm</h1>
+        
+            <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM2xxN3htZXY3ZWtkc2FwaWNkYXN1eGFldHVoZWRtcTF6bGxvbG4yYiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/901mxGLGQN2PyCQpoc/giphy.gif">
+        </div>
+    </div>
+
+    <script>
+
+    const warning = document.querySelector("h1");
+
+    document.addEventListener("DOMContentLoaded", () => {
+
+    setTimeout(() => {
+      warning.textContent = "sure sure?";
+          setTimeout(() => {
+      warning.textContent = "Idk about that";
+    }, 2000);
+    }, 2000);
+    
+
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 5000);
+  });
+
+
+</script>
+</body>
+</html>

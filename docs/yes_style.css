@@ -10,11 +10,16 @@ body {
 
 .container {
     text-align: center;
+
+}
+
+#warning {
+    font-size: 10vw;
 }
 
 .header_text {
     font-size: 3em;
-    color: #d32f2f;
+    color: #f77878;
 }
 
 .gif_container img {

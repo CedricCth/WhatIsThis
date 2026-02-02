@@ -1,22 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Will You Be My Valentine?</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Question 💖</title>
+  <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
-    <div class="container">
-        <h1>Will you be my Valentine?</h1>
-        <div class="buttons">
-            <button class="yes-button" onclick="handleYesClick()">Yes</button>
-            <button class="no-button" onclick="handleNoClick()">No</button>
-        </div>
-        <div class="gif_container">
-            <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
-        </div>
-    </div>
-    <script src="script.js"></script>
+  <div class="card">
+    <h1>Do you want to know a question?</h1>
+
+    <section class="options yes">
+      <button>Yes</button>
+      <button >Yes, sure</button>
+      <button >YES BABY OFC I ALWAYS WANT TO KNOW AND NEVER COULD SAY NO TO YOU 🥰 </button>
+      <button class="no">No</button>
+    </section>
+  </div>
+
+  <script>
+    const buttons = document.querySelector(".yes");
+
+    buttons.addEventListener("click", (event) => {
+         const target = event.target;
+        console.log("event executed");
+        if (target.tagName !== "BUTTON") return;
+
+        const text = target.textContent.trim();
+
+        if (target.classList.contains("no")) {
+            go("no");                 // -> no.html
+        return;
+        }
+        console.log("went through");
+        if (text.startsWith("Yes, sure")) go("yes-sure"); // -> yes-course.html
+        else if (text.startsWith("Yes")) go("yes");                 // -> yes.html
+        else if (text.startsWith("YES BABY")) go("always"); // -> always.html
+    })
+
+    function go(end) {
+        // create html with question + end .html
+      window.location.href = end + ".html";
+    }
+  </script>
 </body>
 </html>
